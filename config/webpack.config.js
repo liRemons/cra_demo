@@ -350,6 +350,7 @@ module.exports = function (webpackEnv) {
         "@store": pathResolve("../src/store"),
         "@utils": pathResolve("../src/utils"),
         "@api": pathResolve("../src/api"),
+        '@axios':pathResolve('../src/axios')
       },
       plugins: [
         // Adds support for installing with Plug'n'Play, leading to faster installs and adding
@@ -574,7 +575,10 @@ module.exports = function (webpackEnv) {
                   importLoaders: 1,
                   sourceMap: isEnvProduction && shouldUseSourceMap,
                   modules: {
-                    getLocalIdent: getCSSModuleLocalIdent,
+                    mode:'local',
+                    // localIdentName:'[path][name]__[local]_[hash:base:64:14]'
+                    localIdentName:'[local]_[hash:base:64:14]',
+                    getLocalIdent:getCSSModuleLocalIdent
                   },
                 },
                 "less-loader"

@@ -1,3 +1,11 @@
+/*
+ * @Descripttion: 
+ * @version: 
+ * @Author: Remons
+ * @Date: 2021-04-07 21:46:39
+ * @LastEditors: Remons
+ * @LastEditTime: 2021-04-08 21:12:43
+ */
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
@@ -7,6 +15,8 @@ import { Provider } from "react-redux";
 import store from "@store";
 import RouteEl from "@router";
 import "antd/dist/antd.css";
+import { createLoadingDOM } from '@utils'
+createLoadingDOM()
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
