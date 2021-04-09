@@ -1,13 +1,6 @@
-/*
- * @Descripttion:
- * @version:
- * @Author: Remons
- * @Date: 2021-04-07 22:43:19
- * @LastEditors: Remons
- * @LastEditTime: 2021-04-07 22:48:51
- */
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
+// 此处做了封装，attr, actionCreators 接受数组或者单个，数组的情况是如果需要多个reduce 中的方法或数据，则传入数组
 export default ({ attr, actionCreators }) => (components) => {
   const mapStateToProps = (state, ownProps) => {
     if (attr instanceof Array) {
@@ -31,5 +24,6 @@ export default ({ attr, actionCreators }) => (components) => {
       return bindActionCreators(actionCreators, dispatch);
     }
   };
+  // 还是原来一样的 connect
   return connect(mapStateToProps, mapDispatchToProps)(components);
 };

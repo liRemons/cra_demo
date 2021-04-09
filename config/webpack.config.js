@@ -576,9 +576,8 @@ module.exports = function (webpackEnv) {
                   sourceMap: isEnvProduction && shouldUseSourceMap,
                   modules: {
                     mode:'local',
-                    // localIdentName:'[path][name]__[local]_[hash:base:64:14]'
-                    localIdentName:'[local]_[hash:base:64:14]',
-                    getLocalIdent:getCSSModuleLocalIdent
+                    localIdentName:'[path][name]__[local]--[hash:base64:14]',
+                    // getLocalIdent:getCSSModuleLocalIdent
                   },
                 },
                 "less-loader"

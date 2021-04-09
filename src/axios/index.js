@@ -1,11 +1,3 @@
-/*
- * @Descripttion:
- * @version:
- * @Author: Remons
- * @Date: 2021-04-08 21:25:40
- * @LastEditors: Remons
- * @LastEditTime: 2021-04-08 22:16:55
- */
 import axios from "axios";
 import ReactDOM from "react-dom";
 import qs from "qs";
@@ -15,9 +7,11 @@ const controlLoading = ({ isOpen }) => {
   const loadingDOM = document.getElementById("loading");
   if (isOpen) {
     loadingDOM.setAttribute("class", "loadingVerlay");
+    loadingDOM.style.display = 'block'
     ReactDOM.render(<Spin tip="加载中..." size="large"></Spin>, loadingDOM);
   } else {
     loadingDOM.setAttribute("class", "");
+    loadingDOM.style.display = 'none'
     ReactDOM.render("", loadingDOM);
   }
 };
@@ -70,7 +64,7 @@ arr.forEach((item) => {
       // 因为接口中没有返回特定状态码，所以没有配置
       loadingCount--;
       if (loadingCount <= 0) {
-        controlLoading({ isOpen: true });
+        controlLoading({ isOpen: false });
       }
       message.error(error.message);
       Promise.reject(error);
