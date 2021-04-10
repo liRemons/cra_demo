@@ -40,6 +40,7 @@
 // @router     ==> src/router
 // @utils      ==> src/utils
 // @api        ==> src/api
+// @assets     ==> src/assets
 ```
 
 ##### 2. css Modules 使用方式
