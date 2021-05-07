@@ -12,6 +12,7 @@
 ```bash
 ├─src
     │  index.js # 项目入口文件
+    │  config.js # 项目其它配置文件
     │  setupProxy.js # 跨域代理请求
     ├─api # 接口定义
     ├─axios # axios 拦截器封装
@@ -41,6 +42,7 @@
 // @utils      ==> src/utils
 // @api        ==> src/api
 // @assets     ==> src/assets
+// @config     ==> src/config.js
 ```
 
 ##### 2. css Modules 使用方式
