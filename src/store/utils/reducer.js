@@ -1,17 +1,16 @@
-import * as type from './type'
+import * as type from "./type";
 const defaultState = {
-  scroll:{}
-}
+  scroll: {},
+};
 
-export default ( state = defaultState, action = {} )=> {
-  const newState = { ...state }
+export default (state = defaultState, action = {}) => {
+  const newState = { ...state };
   switch (action.type) {
     case type.SET_SCROLL:
-      
       break;
-  
+
     default:
       break;
   }
-  return newState
-}
+  return newState;
+};

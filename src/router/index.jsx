@@ -9,7 +9,6 @@ const initRoute = (data, history) =>
       path={item.path}
       exact={item.path === '/'}
       key={item.path + 'route'}
-      // component={item.component}
       render={() => <item.component {...item} history={history}></item.component>}
     ></Route>
   )
